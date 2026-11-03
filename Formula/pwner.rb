@@ -28,9 +28,14 @@ class Pwner < Formula
     sha256 "741e2c3b351ddf169a738da9f2c048608ff7f2c5cc02f1ebc6b118bb090d5d55"
   end
 
+  # Held at 2.8.0, the last release whose sdist builds with hatchling. 2.9.0 switched its
+  # build backend to uv_build, which Homebrew cannot build: resources are installed with
+  # `--no-binary :all:`, so pip tries to build uv_build from source too, and that needs
+  # maturin and a Rust toolchain. pwner only requires dnspython>=2.6. Move this up when
+  # uv_build is no longer a from-source dependency.
   resource "dnspython" do
-    url "https://files.pythonhosted.org/packages/ef/4a/50822184bd67cc6493f0fb6a880749158fcd31ab3fa07409acfd91f9fc85/dnspython-2.9.0.tar.gz"
-    sha256 "b44dc6b18f07a8b1c56676a19fbfdb5209415b046a9cece286baafa87ff3f7f1"
+    url "https://files.pythonhosted.org/packages/8c/8b/57666417c0f90f08bcafa776861060426765fdb422eb10212086fb811d26/dnspython-2.8.0.tar.gz"
+    sha256 "181d3c6996452cb1189c4046c61599b84a5a86e099562ffde77d26984ff26d0f"
   end
 
   resource "h11" do
