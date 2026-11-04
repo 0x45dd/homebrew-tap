@@ -3,8 +3,8 @@ class Pwner < Formula
 
   desc "Agentic network pentest tool you talk to"
   homepage "https://www.pwner.si/"
-  url "https://github.com/0x45dd/pwner/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "dad7259c53fbd6faec29f0b8e40642d5aba1ec4f77cbd8419582d15b4f112f6d"
+  url "https://github.com/0x45dd/pwner/archive/refs/tags/v0.2.0.tar.gz"
+  sha256 "6b1d08c1a42db9ab09f9a90751e3ad39a904902cc2beed296b7ab39b5d2b4e8c"
   license "AGPL-3.0-or-later"
   head "https://github.com/0x45dd/pwner.git", branch: "main"
 
